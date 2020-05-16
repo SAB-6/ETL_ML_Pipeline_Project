@@ -1,4 +1,4 @@
-# Disaster ETL/ML Pipeline Project
+# Disaster Response ETL/ML Pipeline Project
 ETL and Machine learning pipeline using python
 The ETL/ML project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. 
 
