@@ -49,7 +49,7 @@ def load_data(database_filepath):
     Y = df.drop(['id','message','original','genre'], axis = 1).values
     
     # column names for the target columns
-    category_names = list(df.drop(['id','message','original','genre'], axis=1).columns)
+    category_names = Y.columns
    
     return X, Y, category_names
 
