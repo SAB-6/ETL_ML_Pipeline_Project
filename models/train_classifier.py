@@ -98,17 +98,21 @@ def build_model():
     #X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.3, random_state = 42) 
     
     #construct a pipeline to perform all prepocessing tasks and model instantiation sequentially
-    pipeline_rf = Pipeline([
-    ('count', CountVectorizer(lowercase=False, tokenizer=tokenize, stop_words= 'english', ngram_range=(1, 2))),
-    ('tfidf', TfidfTransformer(sublinear_tf=True)),
+    pipeline = Pipeline([('count', CountVectorizer(lowercase=False, tokenizer=tokenize, stop_words= 'english')),
+                     ('tfidf', TfidfTransformer()),
                          ('clf', MultiOutputClassifier(RandomForestClassifier()))
                         ])
     
-
+    #parmeters to tune the model
+    parameters = {'count__ngram_range': [(1,1), (1,2)],
+             'tfidf__sublinear_tf': [True, False]
+             }
+    
+    #instantiate a gridsearchcv object with the defined paarmeters 
+    cv = GridSearchCV(pipeline, cv = 5, param_grid=parameters)
     
       
-    return pipeline_rf
-
+    return cv
 def evaluate_model(model, X_test, Y_test, category_names):
     """
     Model evaluation
