@@ -17,3 +17,13 @@ The Project is subdivided into:
 - Flask 0.12+
 - Plotly==2.0.15
 - gunicorn 19.9+
+
+# Instruction on how to run the program while in the main project directory (ETL_ML_Pipleine_project)
+## - To run the ETL pipeline (which extracts the data, transforms it and load it into the database) type:
+        python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+## - To run Machine learning (ML) pipeline(which perform feature extractio, trains, predict and saves the model type:
+        python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+## - To run the app:
+        Navigate to the app directory and type python run.py
+        Then go to http://0.0.0.0:3001/
+
