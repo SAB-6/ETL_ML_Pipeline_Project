@@ -1,5 +1,5 @@
 # Disaster Response ETL/ML Pipeline Project
-<img scr = "https://miyamotointernational.com/wp-content/uploads/disaster-response.jpg"/>
+<img scr ="https://miyamotointernational.com/wp-content/uploads/disaster-response.jpg"/>
 
 ETL and Machine learning pipeline using python
 The ETL/ML project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight. 
