@@ -26,6 +26,6 @@ The Project is subdivided into:
 ## - To run the Machine learning (ML) pipeline(which perform feature extraction, trains, predict and saves the model, type:
         python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ## - To run the app:
-        Navigate to the app directory and <strong>type python run.py <strong>
+        Navigate to the app directory and type python run.py
         Then go to http://0.0.0.0:3001/
 
